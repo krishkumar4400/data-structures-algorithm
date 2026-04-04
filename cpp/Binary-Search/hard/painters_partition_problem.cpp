@@ -39,7 +39,8 @@ public:
             {
                 painters++;
                 time = val;
-                if(painters > k) return false; // early exit
+                if (painters > k)
+                    return false; // early exit
             }
         }
         return painters <= k;
@@ -74,6 +75,6 @@ int main()
     int k = 2;
     Solution s;
     int ans = s.minTimeToPaint(nums, k);
-    cout << "Ans = " << ans <<endl;
+    cout << "Ans = " << ans << endl;
     return 0;
 }
