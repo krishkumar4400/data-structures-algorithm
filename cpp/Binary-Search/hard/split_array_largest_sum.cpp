@@ -37,7 +37,7 @@ public:
                 return false;
             }
 
-            if (pages + val <= maxAllowedPages)
+            if (pages + val <= maxAllowedPages) 
             {
                 pages += val;
             }
@@ -52,19 +52,23 @@ public:
 
     int splitArray(vector<int> nums, int k)
     {
-        int st = 0, end = sum(nums);
         int n = nums.size();
+        if(k > n) {
+            return -1;
+        }
+        
+        int st = 0, end = sum(nums); // range of possible answers
         int ans = -1;
 
         while (st <= end)
         {
             int mid = st + (end - st) / 2;
-            if (isValid(nums, n, k, mid))
+            if (isValid(nums, n, k, mid)) // left
             {
                 ans = mid;
                 end = mid - 1;
             }
-            else
+            else // right
             {
                 st = mid + 1;
             }
