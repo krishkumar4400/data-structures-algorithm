@@ -1,5 +1,5 @@
 /**
- * Problem: Painters Partition Problem
+ * Problem: Painters minTimeToPaint Problem
  * Difficulty: Hard
  * Pattern: Binary Search
  *
@@ -16,7 +16,7 @@ class Solution
 {
 public:
     int sum(vector<int> nums)
-    {
+    { // O(n)
         int arraySum = 0;
         for (int val : nums)
         {
@@ -25,7 +25,7 @@ public:
         return arraySum;
     }
 
-    int isPossible(vector<int> nums, int maxAllowedTime, int k)
+    int isPossible(vector<int> nums, int maxAllowedTime, int k) // O(n)
     {
         int painters = 1;
         int time = 0;
@@ -42,25 +42,25 @@ public:
                 if(painters > k) return false; // early exit
             }
         }
-        return true;
+        return painters <= k;
     }
 
-    int partition(vector<int> nums, int k)
-    {
+    int minTimeToPaint(vector<int> nums, int k)
+    { // O(log (sum) * n)
         int st = *max_element(nums.begin(), nums.end());
         int end = sum(nums);
         int ans = -1;
 
         while (st <= end)
-        {
+        { // O(log(sum))
             int mid = st + (end - st) / 2;
             if (isPossible(nums, mid, k))
-            {
+            { // left
                 end = mid - 1;
                 ans = mid;
             }
             else
-            {
+            { // right
                 st = mid + 1;
             }
         }
@@ -73,7 +73,7 @@ int main()
     vector<int> nums = {40, 30, 10, 20};
     int k = 2;
     Solution s;
-    int ans = s.partition(nums, k);
+    int ans = s.minTimeToPaint(nums, k);
     cout << "Ans = " << ans <<endl;
     return 0;
 }
