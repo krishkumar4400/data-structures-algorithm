@@ -19,14 +19,14 @@ Problems are organized by data structures and algorithmic patterns.
 - Graphs
 - Dynamic Programming
 
-## 📊 Progress Tracker
+<!-- ## 📊 Progress Tracker
 
 | Topic | Easy | Medium | Hard |
 |------|------|--------|------|
 | Arrays | 0 | 0 | 0 |
 | Strings | 0 | 0 | 0 |
 | Bit Manipulation | 1 | 0 | 0 |
-| DP | 0 | 0 | 0 |
+| DP | 0 | 0 | 0 | -->
 
 ## 🏆 Platforms
 
