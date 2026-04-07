@@ -36,7 +36,7 @@ public:
     }
 
     int maxDistance(vector<int> &position, int m)
-    { // O(log Range * N) + O(nlogn)
+    {                                           // O(log Range * N) + O(nlogn)
         sort(position.begin(), position.end()); // O(n log n)
         int n = position.size();
         int st = 1;
