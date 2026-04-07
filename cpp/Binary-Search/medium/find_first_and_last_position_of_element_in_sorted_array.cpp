@@ -62,7 +62,7 @@ int main()
     vector<int> nums = {5, 7, 7, 8, 8, 10};
     int target = 8;
     Solution s;
-    vector<int>ans = s.searchRange(nums, target);
+    vector<int> ans = s.searchRange(nums, target);
     cout << "Ans = [" << ans[0] << "," << ans[1] << "]" << endl;
     return 0;
 }
