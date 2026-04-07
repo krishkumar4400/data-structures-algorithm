@@ -32,7 +32,7 @@ Problems are organized by data structures and algorithmic patterns.
 
 - LeetCode
 - GeeksForGeeks
-- CodeStudio
+- Codeforces
 
 ## Languages Used
 
