@@ -1,8 +1,8 @@
 /**
- * Problem: Find First and Last Position of Element in Sorted Array
+ * Problem: Valid Palindrome
  * Leetcode: 125
- * Difficulty: Medium
- * Pattern: Binary Search
+ * Difficulty: Easy
+ * Pattern: Two Pointer's
  *
 
  * Approach 1: Optimal  - Binary search
